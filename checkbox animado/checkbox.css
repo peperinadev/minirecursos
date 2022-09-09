@@ -1,0 +1,44 @@
+body{
+    background-color: #383838;
+    color: white;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="chekbox"]{
+    font-size: 30px;
+    appearance: none;
+    width: 100px;
+    height: 45px;
+    background-color: #ddd; 
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s all ease-in-out;
+}
+input[type="checkbox"]:checked{
+    background-color: #0ebeff;
+}
+
+input[type="checkbox"]::after{
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transform: scale(0.7);
+    left: 0;
+    transition: 0.2s all ease-in-out;
+}
+input[type="checkbox"]:checked::after{
+    left: calc(100% - 45px);
+}
