@@ -23,6 +23,6 @@
 @keyframes sidetoside {
     50%{
         left: 100%;
-        transform: translateX(calc(-100% - 4px));
+        transform: translateX(calc( -100% - 4px ));
     }
 }
