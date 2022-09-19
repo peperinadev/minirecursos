@@ -1,0 +1,41 @@
+.icon{
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+.icon::after{
+    content: attr(data-number);
+    width: 20px;
+    height: 20px;
+    background-color: #d32b2b;
+    color: #fff;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    transform: translateY(3px);
+    opacity: 1;
+}
+.bell-icon{
+    max-width: 100%;
+} 
+.icon .bell-icon{
+    animation: shake 1s forwards;
+}
+
+@keyframes shake {
+    10%{
+        transform: rotate(15deg);
+    }
+    20%{
+        transform: rotate(-15deg);
+    }
+    30%{
+        transform: rotate(15deg);
+    }
+    50%{
+        transform: rotate(-15deg);
+    }
+}
